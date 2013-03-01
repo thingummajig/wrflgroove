@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}DJs{% endblock %}
+
+{% block content %}
+
+    {% block h1 %}DJs added successfully:{% endblock %}
+    
+    {% for dj in dj_list %}
+        <p>{{ dj.name }}</p>
+    {% endfor %}
+{% endblock %}

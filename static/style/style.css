@@ -1,0 +1,108 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.75em;
+	color: #3B3B3B;
+	letter-spacing: 0.1em;
+	background-color: #F2F2F2;
+}
+
+#site_wrapper {
+	max-width: 70%;
+	margin: 0 auto;
+	margin-top: 3em;
+}
+
+.header {
+	font-family: 'Signika', sans-serif;
+	letter-spacing: 0.1em;
+	position: relative;
+}
+
+.logo {
+	float: left;
+	margin-right: 1em;
+	position: relative;
+}
+
+.name {
+	font-size: 2em;
+	font-weight: 600;
+	letter-spacing: .15em;
+	margin-left: 0.15em;
+	position: relative;
+	float: left;
+}
+
+.nav {
+	color: #F0F0F0 !important;
+	display: inline-block;
+	font-size: 0.75em;
+	text-align: center;	
+	text-decoration: none;
+	width: 125px;
+	height: 75px;
+	line-height: 75px;
+	margin: 0.5em;
+}
+
+.top {
+	max-width: 80%;
+	float: left;
+}
+
+/*
+@media screen and (min-width:1194px) {
+	.nav {
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 1193px) {
+	.nav{
+		display: inline;
+	}
+}
+*/
+
+.one {
+	background-color: #7DA641;
+}
+
+.two {
+	background-color: #B2BF84;
+}
+
+.three {
+	background-color: #592918;
+}
+
+.four {
+	background-color: #916B68;
+}
+
+#content_wrapper {
+	margin-top: 1.8em;
+}
+
+.content a:link, a:visited {
+	color: #7DA641;
+	text-decoration: none;
+	border-bottom: 1px dashed #CCCCCC;
+}
+
+.content a:hover {
+	color: #8EA65B;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.clear {
+	clear: both;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

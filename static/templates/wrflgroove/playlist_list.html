@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>WRFLgroove</title>
+    </head>
+    <body>
+        {% if object_list %}
+        <h1>Recently played</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Play time</th>
+                    <th>Artist</th>
+                    <th>Song</th>
+                    <th>Album</th>
+                    <th>DJ</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for playlist in object_list %}
+                <tr>
+                    <td> {{ playlist.playtime }} </td>
+                    <td> {{ playlist.artist }} </td>
+                    <td> {{ playlist.song }} </td>
+                    <td> {{ playlist.album }} </td>
+                    <td> {{ playlist.dj }} </td>
+                </tr>
+            {% endfor %}
+        {% else %}
+        <h1>No recent plays</h1>
+        {% endif %}
+    </body>
+</html>

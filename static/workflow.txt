@@ -1,0 +1,19 @@
+APP NAME:  WeatherAnywhere
+AUTHOR:    Nathan Carter (nathan.andrew.carter@gmail.com
+START:     06 February 2013
+TECH LIST: HTML
+           CSS
+           JSON
+           Python 2.7
+           Django 
+           SQLite 3
+           API (wunderground.com)
+           git
+
+VERSION:
+
+weatheranywhere0.1.0 - User will be able to find forecast information based on ZIP code (US only)
+
+weatheranywhere0.2.0 - Add ability to select certain forecast aspects and return results (e.g., rain, temp below a certain point, humidity)
+
+weatheranywhere0.3.0 - 
