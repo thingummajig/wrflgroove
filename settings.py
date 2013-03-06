@@ -104,8 +104,8 @@ ROOT_URLCONF = 'mysite.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    '/home/thingummajig/mysite/static/templates',
-    '/home/thingummajig/mysite/static/templates/wrflgroove',
+    '/home/thingummajig/mysite/static/wrflgroove',
+    '/home/thingummajig/mysite/static/',
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %} WRFLgroove {% endblock %}
+{% block content %}
+    {% if object_list %}
+        <h2> Huh? </h2>
+        <div class="row">
+        {% for play in object_list %}
+            <div class="span12">{{ play.artist }} - {{ play.song }}</div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from django.shortcuts import render_to_response
+from django.views.generic.list_detail import object_list
 import urllib
 from datetime import datetime
 from models import DJ, Playlist
@@ -9,6 +10,11 @@ url = 'http://wrfl.fm/playlist/'
 r = urllib.urlopen(url).read()
 soup = BeautifulSoup(r, "html5lib")
 
+def track_list(request, dj_name):
+    deejay = DJ.objects.get(name=dj_name)
+    queryset = Playlist.objects.filter(dj=DJ(id=deejay.id))
+    return object_list(request, queryset=queryset)
+    
 def update_playlist(data):
 
     def cleanDateTime(data):

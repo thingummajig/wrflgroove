@@ -1,0 +1,24 @@
+header {
+    width: 100%;
+    background-color: #FEC110;
+    height: 412px;
+}
+.header_text {
+    font: bold 26px 'Open Sans';
+    color: #FFFFFF;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+nav {
+    width: 600px;
+    vertical-align: bottom;
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+}

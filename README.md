@@ -19,8 +19,8 @@ WRFLgroove is written in Python on the Django framework. The web scraper utility
 primarily uses BeautifulSoup4, with a little help from urllib and html5lib. 
 WRFLgroove makes use of the official [Grooveshark API]
 (http://developers.grooveshark.com) to dynamically generate the DJ playlists.
-Information is stored and retrieved in an SQLite database. The front-end 
-development was created from scratch using HTML5 and CSS3.
+Information is stored and retrieved in an SQLite database. The front-end
+uses Twitter Bootstrap to beautify things a bit.
 MIT Open Source License
 -----------------------
 Permission is hereby granted, free of charge, to any person obtaining
