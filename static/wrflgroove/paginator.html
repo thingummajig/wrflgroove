@@ -1,0 +1,20 @@
+        <div class="pagination pull-right">
+            <ul>
+                {% if has_previous %}
+                    <li><a href="?page={{ previous }}">Prev</a></li>
+                {% endif %}
+                {% if show_first %}
+                    <li><a href="?page=1">1</a></li>
+                    <li>. . .</li>
+                {% endif %}
+                {% for linkpage in page_numbers %}
+                    <li><a href="?page={{ linkpage }}">{{ linkpage }}</a></li>
+                {% endfor %}
+                {% if show_last %}
+                    <li><a href="?page=last">{{ pages }}</a></li>
+                {% endif %}
+                {% if has_next %}
+                    <li><a href="?page={{ next }}">Next</a></li>
+                {% endif %}
+            </ul>
+        </div>

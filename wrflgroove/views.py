@@ -6,16 +6,15 @@ from datetime import datetime
 from models import DJ, Playlist
 import html5lib
 
-url = 'http://wrfl.fm/playlist/'
-r = urllib.urlopen(url).read()
-soup = BeautifulSoup(r, "html5lib")
-
 def track_list(request, dj_name):
     deejay = DJ.objects.get(name=dj_name)
     queryset = Playlist.objects.filter(dj=DJ(id=deejay.id))
-    return object_list(request, queryset=queryset)
+    return object_list(request, queryset=queryset, paginate_by = 50)
     
 def update_playlist(data):
+    url = 'http://wrfl.fm/playlist/'
+    r = urllib.urlopen(url).read()
+    soup = BeautifulSoup(r, "html5lib")
 
     def cleanDateTime(data):
         """
