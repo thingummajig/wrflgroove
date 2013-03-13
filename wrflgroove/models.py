@@ -14,6 +14,7 @@ class Playlist(models.Model):
     album = models.CharField(max_length = 50)
     song = models.CharField(max_length = 100)
     playtime = models.DateTimeField()
+    url = models.CharField(max_length = 200)
 
     def __unicode__(self):
         return u'%s - %s (%s, %s)' % (self.artist, self.song, self.dj, self.playtime)
