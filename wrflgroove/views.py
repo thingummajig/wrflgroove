@@ -10,7 +10,7 @@ from json import load
 import string
 
 def getTinysongURL(artist, song):
-    APIkey = '?format=json&key=2e1826fbf75e266c896f2fdd234b8756'
+    APIkey = '?format=json&key=KEY_GOES_HERE'
     baseUrl = 'http://tinysong.com/a/'
     trackInfo = (artist + ' ' + song).encode('utf-8').translate(None, string.punctuation)
     cleanUrl = (baseUrl + trackInfo + APIkey).replace(' ', '+')
@@ -45,10 +45,13 @@ def cleanDateTime(data):
     data = datetime.strptime(data, dateFormat)
     return data
 
+def getDJ(dj_name):
+    return DJ.objects.get(name=dj_name)
+
 def track_list(request, dj_name):
-    deejay = DJ.objects.get(name=dj_name)
+    deejay = DJ.objects.get(name=dj_name) 
     queryset = Playlist.objects.filter(dj=DJ(id=deejay.id))
-    return object_list(request, queryset=queryset, paginate_by = 50)
+    return object_list(request, queryset=queryset, paginate_by = 50, extra_context = { 'deejay': deejay })
 
 def update_playlist(data):
     url = 'http://wrfl.fm/playlist/'

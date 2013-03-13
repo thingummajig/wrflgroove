@@ -2,18 +2,23 @@
 {% block title %} WRFLgroove {% endblock %}
 {% block content %}
     {% if object_list %}
-        <h2>{{ dj }}</h2>
         <div class="row">
-        {% for play in object_list %}
-            <div class="span12">
-                {% if play.url != '' %}
+        {% if object_list %}
+            <h2>{{ deejay }}</h2>
+            <ul class="unstyled">
+            {% for play in object_list %}
+                <li class="span12">
+                    {% if play.url != '' %}
                     <a href="{{ play.url }}">
-                {% endif %}
-                {{ play.artist }} - {{ play.song }}</div>
-                {% if play.url != '' %}
-                    </a>
-                {% endif %}
-        {% endfor %}
+                    {% endif %}
+                    {{ play.artist }} - {{ play.song }}
+                    {% if play.url != '' %}
+                        </a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
         </div>
         {% if is_paginated %}{% load paginator %}{% paginator 3 %}{% endif %}
     {% endif %}

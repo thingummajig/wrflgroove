@@ -10,7 +10,7 @@ urlpatterns = patterns('',
         url(r'^$', 'django.views.generic.simple.direct_to_template', { 'template': '/home/thingummajig/mysite/static/index.html' }),
         url(r'^wrflgroove/$', 'django.views.generic.list_detail.object_list', { 'queryset': DJ.objects.all().order_by('name')}),  
         url(r'^wrflgroove/update_playlist/$', views.update_playlist),
-        url(r'^wrflgroove/dj/(?P<dj_name>[\S]+)/$', views.track_list),
+        url(r'^wrflgroove/dj/(?P<dj_name>[\S]+)/$', views.track_list), 
     # Examples:
     # url(r'^$', 'mysite.views.home', name='home'),
     # url(r'^mysite/', include('mysite.foo.urls')),
