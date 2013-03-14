@@ -1,30 +1,36 @@
 {% extends 'base.html' %}
-{% block title %} WRFLgroove {% endblock %}
+{% block title %} WRFLgroove  | Listen to your favorite WRFL DJ anywhere, any time{% endblock %}
 {% block content %}
             <section id="listen" class="span10">
                 {% if object_list %}
                 <h2>Meet the DJs</h2>
                 <div class="row">
+                    <ul class="unstyled">
                     {% for dj in object_list %}
-                    <div class="span2"><a href="dj/{{ dj.name }}">{{ dj.name }}</a></div>
+                    <li class="span2"><a href="dj/{{ dj.name }}">{{ dj.name }}</a></li>
                     {% endfor %}
+                    </ul>
                 </div>
                 {% endif %}
             </section>
             <section id="about" class="span10">
                 <h3>What is WRFLgroove?</h3>
                 <p>WRFLgroove is a web application that allows users to access the
-                music of the University of Kentucky's radio station (WRFL)at any
-                time. WRFLgroove creates a Grooveshark playlist for each student DJ
-                and automatically updates the playlist with the music played on-air.</p>
+                music of the University of Kentucky's radio station 
+                (<a href="http://wrfl.fm/">WRFL</a>) at any time. Each DJ has their 
+                own page on WRFLgroove, and any track they play that is available on 
+                <a href="http://grooveshark.com/">Grooveshark</a> is able to be 
+                reached there.</p>
 
                 <h3>How does it work?</h3>
                 <p>Once an hour, on the hour, WRFLgroove scrapes the WRFL playlist
                 page and produces a list of lists. Each inner list contains the time
                 each song was played, as well as the artist, album, and song name as
                 well as the DJ who played it. After a bit of housekeeping with the
-                formatting, each such list is inserted as a row into the database.
-                I'll tell you how the rest works once I write it.</p>
+                formatting, each of these lists is inserted as a row into the database.
+                Then, using the <a href="http://tinysong.com/">Tinysong</a> API, 
+                <a href="http://grooveshark.com/">Grooveshark</a> links to all 
+                available songs are produced.</p>
 
                 <h3>What technologies were used to create WRFLgroove?</h3>
                 <p>WRFLgroove is written in Python on the Django framework. The web
@@ -32,10 +38,10 @@
                 from urllib and html5lib. WRFLgroove makes use of the official
                 Grooveshark API to dynamically generate the DJ playlists.
                 Information is stored and retrieved in an SQLite database.
-                The front end was created from scratch using HTML5 and CSS3.</p>
+                The front end was created using a modified Twitter Bootstrap.</p>
             </section>
             <section id="contact" class="span10">
-                <p>For questions or feature requests, you may email me at
+                <p>For questions, bug reports, or feature requests, you may email me at
                 <a href="mailto:nathan.andrew.carter@gmail.com">nathan.andrew.carter@gmail.com</a>,
                 or send me a tweet.</p>
             </section>

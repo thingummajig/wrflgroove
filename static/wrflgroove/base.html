@@ -9,26 +9,28 @@
     <body>
         <script src="http://code.jquery.com/jquery.js"></script>
         <script src="{{ STATIC_URL }}wrflgroove/js/bootstrap.min.js"></script>
-        <header class="hero-unit">
+        <div class="site_wrapper">
+            <header class="hero-unit">
+                <div class="container">
+                    <h1>WRFLgroove<h1>
+                    <p class="pull-right">Listen to your favorite WRFL DJ anywhere, any time.</p>
+                </div>
+            </header>
+            <nav class="navbar">
+                <div class="navbar-inner">
+                    <ul class="nav nav-pills pull-right">
+                        <li><a href="/wrflgroove">Home</a></li>
+                        <li><a href="http://github.com/thingummajig/wrflgroove">GitHub</a></li>
+                    </ul>
+                </div>
+            </nav>
             <div class="container">
-                <h1>WRFLgroove<h1>
-                <p class="pull-right">Listen to your favorite WRFL DJ anywhere, any time.</p>
+            {% block content %} {% endblock %}
             </div>
-        </header>
-        <nav class="navbar">
-            <div class="navbar-inner">
-                <ul class="nav nav-pills pull-right">
-                    <li><a href="/wrflgroove">Home</a></li>
-                    <li><a href="http://github.com/thingummajig/wrflgroove">GitHub</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="container">
-        {% block content %} {% endblock %}
+            <footer class="modal-footer">
+                <p><small>WRFLgroove is (c) 2013 Nathan Carter and released under the MIT Open Source license.</small></p>
+            </footer>
         </div>
-        <footer class="modal-footer">
-            <p><small>WRFLgroove is (c) 2013 Nathan Carter and released under the MIT Open Source license.</small></p>
-        </footer>
     </body>
 </html>
 

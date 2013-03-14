@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
-{% block title %} WRFLgroove {% endblock %}
+{% block title %} WRFLgroove | {{ deejay }}{% endblock %}
 {% block content %}
     {% if object_list %}
         <div class="row">
         {% if object_list %}
-            <h2>{{ deejay }}</h2>
-            <ul class="unstyled">
+            <h2>{{ deejay }}</h2> 
+            <span class="pull-right"><a href="http://wrfl.fm/en/user/{{ deejay }}">(WRFL Page)</a></span>
             {% for play in object_list %}
-                <li class="span12">
+                <div class="span12">
+                    <div class="playtime"><small>{{ play.playtime }}</small></div>
+                    <div class="track">
                     {% if play.url != '' %}
                     <a href="{{ play.url }}">
                     {% endif %}
@@ -15,9 +17,9 @@
                     {% if play.url != '' %}
                         </a>
                     {% endif %}
-                </li>
+                    </div>
+                </div>
             {% endfor %}
-            </ul>
         {% endif %}
         </div>
         {% if is_paginated %}{% load paginator %}{% paginator 3 %}{% endif %}
