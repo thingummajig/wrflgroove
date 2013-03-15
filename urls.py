@@ -7,8 +7,10 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-        url(r'^$', 'django.views.generic.simple.direct_to_template', { 'template': '/home/thingummajig/mysite/static/index.html' }),
-        url(r'^wrflgroove/$', 'django.views.generic.list_detail.object_list', { 'queryset': DJ.objects.all().order_by('name')}),  
+        url(r'^$', 'django.views.generic.simple.direct_to_template', 
+            { 'template': '/home/thingummajig/mysite/static/index.html' }),
+        url(r'^wrflgroove/$', 'django.views.generic.list_detail.object_list',
+            { 'queryset': DJ.objects.all().extra(select={ 'lower_name': 'lower(name)' }).order_by('lower_name') }),  
         url(r'^wrflgroove/update_playlist/$', views.update_playlist),
         url(r'^wrflgroove/dj/(?P<dj_name>[\S]+)/$', views.track_list), 
     # Examples:

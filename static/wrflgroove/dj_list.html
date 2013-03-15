@@ -24,26 +24,50 @@
 
                 <h3>How does it work?</h3>
                 <p>Once an hour, on the hour, WRFLgroove scrapes the WRFL playlist
-                page and produces a list of lists. Each inner list contains the time
-                each song was played, as well as the artist, album, and song name as
-                well as the DJ who played it. After a bit of housekeeping with the
-                formatting, each of these lists is inserted as a row into the database.
-                Then, using the <a href="http://tinysong.com/">Tinysong</a> API, 
+                page and returns a list of recently played songs. Each list 
+                contains the time each song was played, as well as the artist, 
+                album, and song name as well as the DJ who played it. After a 
+                bit of housekeeping with the formatting, each of these lists is
+                inserted as a row into the database. Then, using the 
+                <a href="http://tinysong.com/">Tinysong</a> API, 
                 <a href="http://grooveshark.com/">Grooveshark</a> links to all 
                 available songs are produced.</p>
 
-                <h3>What technologies were used to create WRFLgroove?</h3>
-                <p>WRFLgroove is written in Python on the Django framework. The web
-                scraper utility primarily uses BeautifulSoup4, with a little help
-                from urllib and html5lib. WRFLgroove makes use of the official
-                Grooveshark API to dynamically generate the DJ playlists.
-                Information is stored and retrieved in an SQLite database.
-                The front end was created using a modified Twitter Bootstrap.</p>
+                <h3>Why is there so little music on here?</h3>
+                <p>One reason is that WRFL's stance on playing only alternative
+                music necessarily limits the percentage of their songs that
+                are available from streaming music services. This is one
+                important reason that WRFLgroove is <strong>not</strong> a 
+                substitute for tuning in to WRFL, but merely a supplement
+                to help listeners find music they would have otherwise 
+                missed.</p>
+
+                <p>In addition, the songs available on WRFLgroove only include
+                those played since March 12, 2013, when the site first reached
+                a workable form. Since I am limited to 32 Tinysong API requests
+                each hour, I won't be able to add older songs from WRFL's 
+                substantial archives.</p>
+
+                <h3>What's next?</h3>
+                <p>Here are some things still in the works for WRFLgroove:</p>
+                <ul>
+                    <li>Spotify playlist support</li>
+                    <li>Alternate layouts for mobile devices and high resolutions</li>
+                    <li>Tagging system for DJs</li>
+                    <li>Youtube or Soundcloud links for songs not available on Grooveshark</li>
+                </ul>
+                
+                <h3>How can I support WRFLgroove?</h3>
+                <p>This website and its source code are free to use for any purpose.
+                The best way to support WRFLgroove is to support WRFL! It's been running
+                non-stop for 25 years, and you can tune in any time at 88.1 FM if you're
+                local, or drop in on their <a href="http://wrfl.fm/site_media/stream.html">
+                live stream</a>.</p>
             </section>
             <section id="contact" class="span10">
                 <p>For questions, bug reports, or feature requests, you may email me at
-                <a href="mailto:nathan.andrew.carter@gmail.com">nathan.andrew.carter@gmail.com</a>,
-                or send me a tweet.</p>
+                <a href="mailto:nathan.andrew.carter@gmail.com">nathan.andrew.carter@gmail.com</a>.
+                </p>
             </section>
 {% endblock %}
 

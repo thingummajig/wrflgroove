@@ -210,7 +210,7 @@ a:hover {
 }
 
 .track {
-    margin-bottom: 1em;
+    margin-bottom: 0.75em;
 }
 
 .row:before,
@@ -5043,6 +5043,7 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 0;
   margin-top: 30px;
   text-align: right;
+  font-size: 12px;
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
   -webkit-border-radius: 0 0 6px 6px;

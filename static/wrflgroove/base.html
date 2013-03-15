@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset='utf-8'>
         <title>{% block title %}WRFLgroove{% endblock title %}</title>
         <link rel="stylesheet" media="screen" href="{{STATIC_URL}}wrflgroove/style/bootstrap.css">
         <link href="http://fonts.googleapis.com/css?family=Signika:400,600" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <script src="http://code.jquery.com/jquery.js"></script>
-        <script src="{{ STATIC_URL }}wrflgroove/js/bootstrap.min.js"></script>
         <div class="site_wrapper">
             <header class="hero-unit">
                 <div class="container">
-                    <h1>WRFLgroove<h1>
+                    <h1>WRFLgroove</h1>
                     <p class="pull-right">Listen to your favorite WRFL DJ anywhere, any time.</p>
                 </div>
             </header>
@@ -28,7 +27,10 @@
             {% block content %} {% endblock %}
             </div>
             <footer class="modal-footer">
-                <p><small>WRFLgroove is (c) 2013 Nathan Carter and released under the MIT Open Source license.</small></p>
+                <p>Proudly powered by Grooveshark</p>
+                <p>WRFLgroove is (c) 2013 Nathan Carter and released under the MIT Open Source license.
+                          It is in no way affiliated with WRFL and does not reflect the beliefs or practices
+                          of WRFL.</p>
             </footer>
         </div>
     </body>
